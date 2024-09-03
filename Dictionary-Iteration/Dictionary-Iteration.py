@@ -16,11 +16,9 @@ num = int(input(" Enter the number of entries you want to add : "))
 
 for _ in range(num):
     key = input("\n Enter the key : ")
-    rev_value = key
     value = int(input(" Enter the value : "))
-    rev_key = value
     my_dict[key] = value  
-    rev_my_dict[rev_key] = rev_value
+    rev_my_dict[value] = key
     
 print("\n The dictionary is : ", my_dict)
 

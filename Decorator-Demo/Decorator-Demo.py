@@ -21,6 +21,7 @@ import time
 
 def time_this(func):
     def wrapper():
+        print("\n")
         print(f"--> Running {func.__name__} ")
         startingTime = time.time()
         result = func()
@@ -28,6 +29,7 @@ def time_this(func):
         endingTime = time.time()
         totalTimeTaken = endingTime- startingTime
         print(f"--> {func.__name__} ran in {totalTimeTaken:.8f} seconds")
+        print("\n")
         return result
     return wrapper
 
@@ -36,3 +38,5 @@ def sleeper_func():
     print(f'sleeping for {2}')
     time.sleep(2)
     return 'Woke up!'
+
+sleeper_func()
